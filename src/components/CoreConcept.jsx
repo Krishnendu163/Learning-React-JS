@@ -1,6 +1,3 @@
-import uspImg from "../assets/state-mgmt.png";
-import { CORE_CONCEPTS } from "../data.js";
-
 export default function CoreConcept({ img, title, para }) {
   return (
     <li>

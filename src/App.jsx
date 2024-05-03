@@ -1,4 +1,5 @@
 import Header from "./components/Header.jsx";
+import { CORE_CONCEPTS } from "./data.js";
 import CoreConcept from "./components/CoreConcept.jsx";
 
 function App() {
@@ -9,13 +10,9 @@ function App() {
         <section className="full_width Usp_sec">
           <div className="container">
             <ul>
+              <CoreConcept {...CORE_CONCEPTS[0]} />
               <CoreConcept
-                img={uspImg}
-                title="Title 1"
-                para="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, tempora."
-              />
-              <CoreConcept
-                img={components}
+                img={CORE_CONCEPTS[2].img}
                 title={CORE_CONCEPTS[2].title}
                 para={CORE_CONCEPTS[2].para}
               />
