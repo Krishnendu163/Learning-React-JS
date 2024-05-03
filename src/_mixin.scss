@@ -1,0 +1,136 @@
+@import "media_querry";
+
+// Gradient
+@mixin cmn_gradient($degree: 90deg, $scnd_vlue: 50%, $first_color: #1c1c1c) {
+    background: linear-gradient(
+        $degree,
+        $first_color 0%,
+        #005ac6 $scnd_vlue,
+        #005ac6 100%
+    );
+    @include transition3s;
+}
+@mixin inner_gradient(
+    $innr_degree: 223deg,
+    $fst_color: #0059c6be,
+    $snd_color: #091522c4,
+    $snd_color_vlu: 50%,
+    $last_color: #424141c7
+) {
+    background: linear-gradient(
+        $innr_degree,
+        $fst_color 0%,
+        $snd_color $snd_color_vlu,
+        $last_color 100%
+    );
+}
+
+// Button
+@mixin cmn_button($btn_color: $white_color) {
+    padding: 8px 15px;
+    @include font-19;
+    color: $btn_color;
+}
+
+// dropdown arrow
+@mixin arrow($br_color: $blue_color, $arrow_top: 7px, $rtdegree: 47deg) {
+    border: solid $br_color;
+    border-width: 0 1.5px 1.5px 0;
+    display: inline-block;
+    padding: 3.2px;
+    top: $arrow_top;
+    @include transition3s;
+    transform: rotate($rtdegree);
+}
+
+// Font Size
+@mixin font-19 {
+    font-size: 19px;
+    @include respond-below(mdx) {
+        font-size: 17px;
+    }
+    @include respond-below(xsm) {
+        font-size: 16px;
+    }
+    @include respond-below(xxs) {
+        font-size: 15px;
+    }
+}
+
+@mixin font_70 {
+    font-size: 70px;
+    @include respond-below(mlg) {
+        font-size: 60px;
+    }
+    @include respond-below(md) {
+        font-size: 50px;
+    }
+    @include respond-below(sm) {
+        font-size: 40px;
+    }
+    @include respond-below(xsm) {
+        font-size: 35px;
+    }
+    @include respond-below(xxs) {
+        font-size: 30px;
+    }
+}
+@mixin font_30 {
+    font-size: 30px;
+    @include respond-below(mdx) {
+        font-size: 25px;
+    }
+    @include respond-below(xsm) {
+        font-size: 19px;
+    }
+    @include respond-below(xxs) {
+        font-size: 18px;
+    }
+}
+
+@mixin font_60 {
+    font-size: 60px;
+
+    @include respond-below(mdx) {
+        font-size: 40px;
+    }
+    @include respond-below(xsm) {
+        font-size: 30px;
+    }
+    @include respond-below(xxs) {
+        font-size: 27px;
+    }
+}
+
+@mixin font_80 {
+    font-size: 80px;
+    @include respond-below(lg) {
+        font-size: 60px;
+    }
+    @include respond-below(xsm) {
+        font-size: 50px;
+    }
+    @include respond-below(xxs) {
+        font-size: 40px;
+    }
+}
+
+// Transition
+@mixin transition3s {
+    transition: all 0.3s ease-in-out;
+}
+
+// Flex
+@mixin flexAIcenter {
+    display: flex;
+    align-items: center;
+}
+@mixin flexJCcenter {
+    display: flex;
+    justify-content: center;
+}
+@mixin flexALLcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
