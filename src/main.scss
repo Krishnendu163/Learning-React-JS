@@ -8,6 +8,7 @@
   h5 {
     font-weight: normal;
   }
+
   h1,
   h2 {
     // @include font_60;
@@ -472,3 +473,28 @@ header {
   }
 }
 // USP end
+
+// Tab Start
+.tab {
+  menu {
+    display: flex;
+    li {
+      list-style: none;
+      margin: 0 5px;
+      button {
+        color: #fff;
+        padding: 10px 18px;
+        border-radius: 7px;
+        background: #090b1975;
+        border: none;
+        cursor: pointer;
+        @include transition3s;
+        &:hover {
+          background: $white_color;
+          color: $black_color;
+        }
+      }
+    }
+  }
+}
+// Tab End
