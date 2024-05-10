@@ -469,6 +469,9 @@ header {
       img {
         width: 100px;
       }
+      p {
+        color: $black_color;
+      }
     }
   }
 }
@@ -494,7 +497,18 @@ header {
           color: $black_color;
         }
       }
+      &.active {
+        button {
+          background: #fff;
+          color: #000;
+        }
+      }
     }
   }
+}
+.tab-content {
+  padding: 20px;
+  background: #ffffff08;
+  margin-top: 25px;
 }
 // Tab End
