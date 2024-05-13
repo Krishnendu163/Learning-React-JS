@@ -1,7 +1,7 @@
 import logoReact from "../../assets/react-core-concepts.png";
 import "./header.scss";
 
-const getDescriptions = ["Fundamental", "Fundamental", "Fundamental3"];
+const getDescriptions = ["Fundamental", "Fundamental2", "Fundamental3"];
 const getRandomInt = (max) => Math.floor(Math.random() * (max + 1));
 
 export default function Header() {

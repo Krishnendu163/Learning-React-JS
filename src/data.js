@@ -7,22 +7,27 @@ export const CORE_CONCEPTS = [
   {
     img: componentsImg,
     title: "Components",
-    para: "The core UI building block - compose the user interface by combining multiple components.",
+    para: "The core UI building block - compose the user interface by combining multiple components. ",
   },
   {
     img: jsxImg,
     title: "JSX",
-    para: "Return (potentially dynamic) HTML(ish) code to define the actual markup that will be rendered.",
+    para: "Return (potentially dynamic) HTML(ish) code to define the actual markup that will be rendered. ",
   },
   {
     img: propsImg,
     title: "Props",
-    para: "Make components configurable (and therefore reusable) by passing input data to them.",
+    para: "Make components configurable (and therefore reusable) by passing input data to them. ",
   },
   {
     img: stateImg,
     title: "State",
     para: "React-managed data which, when changed, causes the component to re-render & the UI to update.",
+  },
+  {
+    img: propsImg,
+    title: "Hotel",
+    para: "Hotels In Sea beach, Get premium hotels in low budget. Also if you want room with swiming pool you can check out the last two hotels",
   },
 ];
 
@@ -70,5 +75,19 @@ export const EXAMPLES = {
           </div>
         );
       }`,
+  },
+  hotel: {
+    title: "Hotel Rooms",
+    para: " ",
+    code: `
+        Ishan Guest House
+        Hotel Riyadh
+        Hotel Banasri
+        Hotel Avibsha
+        Hotel BasataPia
+        Ranikutir,  
+        Hotel Swarna
+        New Classic
+       `,
   },
 };
