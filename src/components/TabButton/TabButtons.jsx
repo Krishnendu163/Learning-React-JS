@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { EXAMPLES } from "../../data";
 import TabButton from "./TabButton";
+import Sections from "../Wrapper/Section.jsx";
+import Tabs from "../Wrapper/Tabs.jsx";
 
 export default function Tabbuttons() {
   const [tabContent, updateval] = useState();
@@ -22,40 +24,44 @@ export default function Tabbuttons() {
     );
   }
   return (
-    <section className="full_width tab cmn_pad">
-      <div className="container">
-        <div className="text_controller">
-          <h2>Example</h2>
-        </div>
-        <menu>
-          <TabButton
-            onSelect={() => handleSelect("components")}
-            isActive={tabContent === "components"}>
-            Components
-          </TabButton>
-          <TabButton
-            onSelect={() => handleSelect("jsx")}
-            isActive={tabContent === "jsx"}>
-            JSX
-          </TabButton>
-          <TabButton
-            onSelect={() => handleSelect("props")}
-            isActive={tabContent === "props"}>
-            Props
-          </TabButton>
-          <TabButton
-            onSelect={() => handleSelect("state")}
-            isActive={tabContent === "state"}>
-            State
-          </TabButton>
-          <TabButton
-            onSelect={() => handleSelect("hotel")}
-            isActive={tabContent === "hotel"}>
-            Hotels
-          </TabButton>
-        </menu>
-        {
-          dfltContnt /* {!tabContent && (
+    <Sections className="full_width tab cmn_pad" title="Examples">
+      <Tabs
+        ButtonContrainer="menu"
+        button={
+          <>
+            <TabButton
+              onClick={() => handleSelect("components")}
+              isActive={tabContent === "components"}>
+              Components
+            </TabButton>
+
+            <TabButton
+              onClick={() => handleSelect("jsx")}
+              isActive={tabContent === "jsx"}>
+              JSX
+            </TabButton>
+
+            <TabButton
+              onClick={() => handleSelect("props")}
+              isActive={tabContent === "props"}>
+              Props
+            </TabButton>
+            <TabButton
+              onClick={() => handleSelect("state")}
+              isActive={tabContent === "state"}>
+              State
+            </TabButton>
+            <TabButton
+              onClick={() => handleSelect("hotel")}
+              isActive={tabContent === "hotel"}>
+              Hotels
+            </TabButton>
+          </>
+        }>
+        {dfltContnt}
+      </Tabs>
+
+      {/*dfltContnt  {!tabContent && (
               <div className="tab-content">Please select a topic.</div>
             )}
             {tabContent && (
@@ -66,9 +72,7 @@ export default function Tabbuttons() {
                   <code>{EXAMPLES[tabContent].code}</code>
                 </pre>
               </div>
-            )} */
-        }
-      </div>
-    </section>
+            )} */}
+    </Sections>
   );
 }
